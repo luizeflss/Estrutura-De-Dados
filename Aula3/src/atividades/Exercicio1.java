@@ -1,4 +1,4 @@
-package Aula3.src;
+package Aula3.src.atividades;
 
 public class Exercicio1 {
     /*

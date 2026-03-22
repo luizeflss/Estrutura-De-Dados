@@ -1,4 +1,4 @@
-package Aula3.src;
+package Aula3.src.atividades;
 
 public class Exercicio3 {
     /*
@@ -17,6 +17,7 @@ public class Exercicio3 {
             }
             decimal = decimal * 2 + bin[i];
         }
+     
         return decimal;
     }
 }
