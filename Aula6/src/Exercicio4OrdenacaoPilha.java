@@ -2,64 +2,6 @@ package Aula6.src;
 import java.util.Scanner;
 
 public class Exercicio4OrdenacaoPilha {
-    public Integer[] pilha;//definie um array de inteiros
-    int posicaoPilha;
-
-    public Exercicio4OrdenacaoPilha(int tamanho){
-        this.posicaoPilha = -1;//-1 == pilha vazia; a posicao zero de um array já armazena informação
-        this.pilha = new Integer[tamanho];
-    }
-
-    public boolean pilhaVazia(){
-        if(this.posicaoPilha == -1){
-            //(posicaoPilha == -1) == pilha vazia, retorna true
-            return true;
-        }
-        return false;
-    }
-
-    public int topoPilha(){
-        if(this.pilhaVazia()){
-            throw new RuntimeException("Pilha vazia");//esse return indica que não há informação na pilha
-        }
-        return pilha[this.posicaoPilha];
-    }
-
-    public int tamanho(){
-        if(this.pilhaVazia()){
-            return 0;//esse return indica que não há informação na pilha
-        }
-        return this.posicaoPilha + 1;
-        //+1 necessário para exibir a qntd de itens corretamente, já que um array se inicia do zero
-    }
-
-    public void empilhar(Integer valor){
-        if(this.posicaoPilha < this.pilha.length - 1){
-            //verifica se a posicao atual da pilha é menor do que o tamanho total da pilha,
-            //se for, então é inserido um valor na pilha e ao mesmo tempo é feito o incremento em posicaoPilha
-            this.pilha[++posicaoPilha] = valor;
-        }
-    }
-
-    public Integer desempilhar(){
-        if(pilhaVazia()){
-            return null;
-            //se a pilha já estiver vazia o retorn é null e nada será realizado
-        }
-        return this.pilha[this.posicaoPilha --];
-        //retornamos o que tem na ultima posição da pilha e decrementamos de posicaoPilha  
-    }
-
-    public String converterString() {
-    if (pilhaVazia()) return "Pilha vazia";
-
-    String resultado = "";
-    for (int i = 0; i <= posicaoPilha; i++) {
-        resultado += pilha[i] + " ";
-    }
-    return resultado;
-}
-
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
 
@@ -116,5 +58,63 @@ public class Exercicio4OrdenacaoPilha {
             }
 
         } while (opcao != 0);
+    }
+
+    public Integer[] pilha;//definie um array de inteiros
+    int posicaoPilha;
+
+    public Exercicio4OrdenacaoPilha(int tamanho){
+        this.posicaoPilha = -1;//-1 == pilha vazia; a posicao zero de um array já armazena informação
+        this.pilha = new Integer[tamanho];
+    }
+
+    public boolean pilhaVazia(){
+        if(this.posicaoPilha == -1){
+            //(posicaoPilha == -1) == pilha vazia, retorna true
+            return true;
+        }
+        return false;
+    }
+
+    public int topoPilha(){
+        if(this.pilhaVazia()){
+            throw new RuntimeException("Pilha vazia");//esse return indica que não há informação na pilha
+        }
+        return pilha[this.posicaoPilha];
+    }
+
+    public int tamanho(){
+        if(this.pilhaVazia()){
+            return 0;//esse return indica que não há informação na pilha
+        }
+        return this.posicaoPilha + 1;
+        //+1 necessário para exibir a qntd de itens corretamente, já que um array se inicia do zero
+    }
+
+    public void empilhar(Integer valor){
+        if(this.posicaoPilha < this.pilha.length - 1){
+            //verifica se a posicao atual da pilha é menor do que o tamanho total da pilha,
+            //se for, então é inserido um valor na pilha e ao mesmo tempo é feito o incremento em posicaoPilha
+            this.pilha[++posicaoPilha] = valor;
+        }
+    }
+
+    public Integer desempilhar(){
+        if(pilhaVazia()){
+            return null;
+            //se a pilha já estiver vazia o retorn é null e nada será realizado
+        }
+        return this.pilha[this.posicaoPilha --];
+        //retornamos o que tem na ultima posição da pilha e decrementamos de posicaoPilha  
+    }
+
+    public String converterString() {
+    if (pilhaVazia()) return "Pilha vazia";
+
+    String resultado = "";
+    for (int i = 0; i <= posicaoPilha; i++) {
+        resultado += pilha[i] + " ";
+    }
+    return resultado;
     }
 }
