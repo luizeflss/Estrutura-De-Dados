@@ -1,0 +1,16 @@
+EXERCÍCIO 6 – EXPRESSÕES MATEMÁTICAS E PILHAS
+
+1. Resolução da expressão
+
+A expressão [(A + B) * C] / D deve ser resolvida respeitando a prioridade das operações.
+
+Primeiro resolve-se o que está dentro dos parênteses:
+(A + B)
+
+Depois multiplica pelo valor de C:
+(A + B) * C
+
+Por fim, divide o resultado por D:
+[(A + B) * C] / D
+
+Ou seja, sempre resolvemos de dentro para fora.
