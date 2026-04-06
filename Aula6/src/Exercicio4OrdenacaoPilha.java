@@ -53,6 +53,9 @@ public class Exercicio4OrdenacaoPilha {
                     System.out.println(pilhaAuxilar.converterString()); 
                     break;
                     
+                case 0:
+                    System.out.println("Saindo!");
+                    break;
                 default:
                     System.out.println("Opção inválida!");
             }
